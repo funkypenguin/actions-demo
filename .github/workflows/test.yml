@@ -9,6 +9,9 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v2
+      with:
+        ref: ci
+        fetch-depth: 0
     - uses: actions/hello-world-javascript-action@main
       with:
         who-to-greet: 'Mona the Octocat'
