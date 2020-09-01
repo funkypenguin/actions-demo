@@ -5,7 +5,6 @@ on:
   
 jobs:
   test-cert-manager:
-    runs-on: self-hosted
     steps:
     - uses: actions/checkout@v2
     - uses: actions/hello-world-javascript-action@main
