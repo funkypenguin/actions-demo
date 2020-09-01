@@ -10,15 +10,14 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: dev
-        fetch-depth: 0        
-    - uses: actions/hello-world-javascript-action@main
-      with:
-        who-to-greet: 'Mona the Octocat'
-    - name: Make changes to pull request
-      run: date +%s > report.txt        
+        ref: dev      
+    - name: switch to CI branch
+      run: |
+        git fetch origin ci:ci
+        git reset --hard ci    
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v3       
       with:
         base: dev
         labels: automerge 
+        branch: ci-promotion-to-dev
