@@ -1,8 +1,7 @@
 name: test
 # This action should only be called on a pull request against the master branch (allows WIP pushes without triggering CI)
 on:
-  pull_request:
-    branches: ci
+  push:
   
 jobs:
   test-cert-manager:
