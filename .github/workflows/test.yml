@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: ci
+        ref: dev
         fetch-depth: 0        
     - uses: actions/hello-world-javascript-action@main
       with:
