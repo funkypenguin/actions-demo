@@ -5,6 +5,7 @@ on:
   
 jobs:
   test-cert-manager:
+    runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v2
     - uses: actions/hello-world-javascript-action@main
