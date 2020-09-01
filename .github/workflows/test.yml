@@ -1,0 +1,14 @@
+name: test
+# This action should only be called on a pull request against the master branch (allows WIP pushes without triggering CI)
+on:
+  pull_request:
+    branches: ci
+  
+jobs:
+  test-cert-manager:
+    runs-on: self-hosted
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/hello-world-javascript-action@main
+      with:
+        who-to-greet: 'Mona the Octocat'
